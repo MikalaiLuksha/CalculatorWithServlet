@@ -1,4 +1,4 @@
-public class Action {
+public class Service {
 
     private OperationCalc operationCalc = new OperationCalc();
 

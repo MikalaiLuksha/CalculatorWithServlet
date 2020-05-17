@@ -9,7 +9,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/main")
 
 public class MainServlet extends HttpServlet {
-    Action action = new Action();
+    Service service = new Service();
 
      @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -17,7 +17,7 @@ public class MainServlet extends HttpServlet {
         double num1 = Double.parseDouble(req.getParameter("num1"));
         double num2 = Double.parseDouble(req.getParameter("num2"));
         String operation = req.getParameter("operation");
-        double num3 = action.calculation(operation, num1, num2);
+        double num3 = service.calculation(operation, num1, num2);
         resp.getWriter().println(num3);
         }
     }
